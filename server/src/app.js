@@ -12,9 +12,9 @@ app.use(bodyParser.json())
 /* Useful for accesing data from other domains or servers. Be aware of security risks with that */
 app.use(cors())
 
-app.get('/status', (req, res) => {
+app.post('/register', (req, res) => {
   res.send({
-    message: 'Hello You!'
+    message: `Hello ${req.body.email} Your user was registered!`
   })
 })
 
